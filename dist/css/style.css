@@ -29,3 +29,11 @@
     border-color: rgb(0, 30, 255);
     color: white;
 }
+.col-md-6
+{
+    overflow: hidden;
+}
+a
+{
+    text-decoration: none;
+}
