@@ -1,0 +1,31 @@
+#form
+{
+    background-image: url("../images/logo_horde.jpeg");
+    height: 100vh;
+    background-position: center;
+    color:white;
+}
+.btn-primary
+{
+    background-color: green;
+    border-color: green;
+    color: white;
+}
+.btn-primary:hover
+{
+    background-color: rgb(1, 80, 1);
+    border-color: rgb(1, 80, 1);
+    color: white;
+}
+.btn-warning
+{
+    background-color: rgb(2, 40, 177);
+    border-color: rgb(2, 40, 177);
+    color: white;
+}
+.btn-warning:hover
+{
+    background-color: rgb(0, 30, 255);
+    border-color: rgb(0, 30, 255);
+    color: white;
+}
