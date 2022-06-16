@@ -7,7 +7,7 @@
 
     <div id="form" class="container-fluid">
         <div class="row pt-5">
-            <form action="" class="col-md-6">
+            <form action="function/createUser.php" method="POST" class="col-md-6">
                 <h1>Inscrivez-vous !</h1>
                     <div class="form-group mb-3">
                         <input type="text" name="pseudo" class="form-control" placeholder="Entrez votre pseudo">
@@ -16,7 +16,7 @@
                         <input type="password" name="password" class="form-control" placeholder="Entrez votre mot de passe">
                     </div>
                     <div class="form-group mb-3">
-                        <input type="text" name="confirmpassword" class="form-control" placeholder="Retapez votre mot de passe">
+                        <input type="password" name="confirmpassword" class="form-control" placeholder="Retapez votre mot de passe">
                     </div>
                     <div class="form-group form-check mb-3">
                         <input type="checkbox" name="role" class="form-check-input">

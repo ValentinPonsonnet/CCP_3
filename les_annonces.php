@@ -1,9 +1,28 @@
 <?php 
+session_start();
+
+if(!isset($_SESSION["pseudo"])){
+    header("Location: login.php");
+}
+
+
+
 require_once("components/header.php");
 require_once("components/nav-bar.php");
+var_dump($_SESSION);
 ?>
 <body>
     <div class="container">
+        <?php if(isset($_GET["message"])) :?>
+
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <?= $_GET["message"] ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+            </button>
+        </div>
+
+        <?php endif ?>
+
         <h1>Les annonces disponible</h1>
         <div class="row mt-5">
             <div class="col-md-4 mb-3">

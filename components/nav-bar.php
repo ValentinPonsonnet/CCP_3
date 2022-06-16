@@ -19,7 +19,7 @@
           <a class="nav-link" href="creer_annonce.php">Créer une annonce</a>
         </li>
       </ul>
-      <a href="">Déconnexion</a>
+      <a href="functions/disconnect.php">Déconnexion</a>
     </div>
   </div>
 </nav>
