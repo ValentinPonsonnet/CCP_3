@@ -1,12 +1,12 @@
 <?php
 require_once("config.php");
 try 
-{
-    $db = new PDO("mysql:host={$config["DB_HOST"]};dbname={$config["DB_NAME"]}", "{$config["DB_USER"]}", "{$config["DB_PASSWORD"]}");
+{    
+    $db = new PDO("mysql:host=localhost;dbname=world_of_help", "root", "root");
 } 
 catch (PDOException $e) 
 {
-    print "Erreur !: " . $e->getMessage() . "<br/>";
+    echo $e->getMessage();
     die();
 }
 ?>

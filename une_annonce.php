@@ -1,20 +1,29 @@
 <?php 
 require_once("components/header.php");
 require_once("components/nav-bar.php");
+require_once("configs/database.php");
+
 ?>
 
-<div class="container">
+    <?php 
+        $rocket = $db->prepare("SELECT id, title, description, image, statut, DATE_FORMAT (created_at, '%d/%m/%Y à %H:%i') AS created_at_format FROM Annonce WHERE id = :id");   
+        $rocket->execute(["id" => $_GET["id"]]);
+
+        $result = $rocket->fetch(PDO::FETCH_ASSOC);
+    ?>
+
+<div class="container" id="une_annonce">
     <div class="row">
         <div class="col-md-6">
-            <img src="https://picsum.photos/400" alt="">
+            <img src=" <?= $result['image']?>" alt="image_de_l'annonce">
         </div>
         <div class="col-md-6">
-            <h1>Mon titre</h1>
-            <h6>Ecrit par : Luzrod - le 10/02/2022 à 10h30 </h6>
+            <h1><?= $result['title'] ?> <span class="badge bg-secondary"><?= $result['statut']?></h1>
             <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                Architecto repellat maxime assumenda corporis vitae, inventore minus officiis possimus libero unde iste, ipsa earum illo fugit quas, nostrum quam animi eius.
-                Facilis omnis, hic ipsum sed nobis perferendis incidunt doloremque assumenda. Itaque tempora doloremque provident suscipit facilis totam ea, omnis nihil facere architecto quos! Repellendus provident odit maxime veniam, expedita facilis.
+                <?= $result["created_at_format"]?>
+            </p>
+            <p>
+                <?= $result['description']?>
             </p>
         </div>
     </div>

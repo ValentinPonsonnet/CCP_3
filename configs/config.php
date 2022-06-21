@@ -1,10 +1,9 @@
 <?php
 
 $config = [
-    "DB_HOST" => "localhost",
-    "DB_NAME" => "world_of_help",
-    "DB_USER" => "root",
-    "DB_PASSWORD" => "root"
+    "SECRET_KEY" => "YV9JbxHSc54bIvQce0XkG",
+    "ROLES" => ["user","guide"],
+    "STATUTS" => ["Demande", "En cours", "Archivé"],
 ];
 
 ?>

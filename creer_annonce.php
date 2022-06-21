@@ -8,7 +8,7 @@ require_once("components/nav-bar.php");
         <div class="col-md-12">
             <h1>Ajouter une annonce</h1>
 
-            <form action="" class="form-group">
+            <form action="functions/addAnnonce.php" method="POST" class="form-group">
                 <div class="form-group mb-3">
                     <input type="text" name="title" class="form-control" placeholder="Entrer un titre">
                 </div>
@@ -32,7 +32,7 @@ require_once("components/nav-bar.php");
                     </select>
                 </div>
                 <div class="form-group mb-3">
-                    <textarea name="description" class="form-control" placeholder="Entrer votre demande"></textarea>
+                    <textarea name="description" class="form-control" placeholder="Détailler votre problème"></textarea>
                 </div>
                 <input type="submit" value="Créer une annonce" class="btn btn-primary">
             </form>
